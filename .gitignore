@@ -1,0 +1,5 @@
+.env
+node_modules
+tailwind.config.js
+postcss.config.js
+
