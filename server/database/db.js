@@ -1,11 +1,20 @@
-const mongoose = require('mongoose')
-const dotenv = require('dotenv')
+const mysql = require('mysql2')
 
-dotenv.config()
+const pool = mysql.createPool({
+  host: 'localhost',
+  port: '3000',
+  user: 'root',
+  database: 'Member Registration',
+  password: 'anything',
+}).promise()
 
-const db = async () => {
-  await mongoose.connect("mongodb+srv://subhamc88:subham2004@userdata.unfcofh.mongodb.net/?retryWrites=true&w=majority&appName=userData")
-    .then(mongoose.connection.once('open', () => console.log("Database is connected")))
-  mongoose.connection.on('error', (error) => console.log(`Error Found:\n${error}`))
-}
-module.exports = db
+pool.getConnection()
+  .then(connection => {
+    console.log('Connected to the database');
+    connection.release()
+  })
+  .catch(error => {
+    console.error('Error connecting to the database:', error);
+  })
+
+module.exports = pool

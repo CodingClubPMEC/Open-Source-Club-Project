@@ -1,15 +1,14 @@
 // Impots
 const app = require('express')()
-const dotenv = require('dotenv')
+const dotenv = require('dotenv').config()
 const cors = require('cors')
-const db = require('./database/db.js')()
+const pool = require('./database/db.js')()
 const memberFormRouter = require('./routes/memberForm.js')
 const bodyParser = require('body-parser')
 
 // Local Variables
 const port = 3000
 
-dotenv.config()
 // Middleware
 app.use(cors({
   origin: "*",
