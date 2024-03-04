@@ -2,21 +2,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// Components
-import Navbar from './components/navbar';
+
+// Components to renber everywhere
+//import Navbar from './components/ui/navbar';
+
 // Pages
 import Home from './pages/Home';
-import NewMembers from './pages/NewMembers';
-
+import Auth from './pages/Auth';
+import ForgotPasswordForm from './components/auth/forotPasswordForm';
 export default function App() {
   return (
-    <div>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/addMembers' element={<NewMembers />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/auth' element={<Auth />} />
+      <Route path='/forgot-password' element={<ForgotPasswordForm />} />
+    </Routes>
   );
 }
 
