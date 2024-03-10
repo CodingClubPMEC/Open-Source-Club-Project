@@ -1,17 +1,18 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Login() {
-
   const styles = {
+    heading:'text-2xl font-semibold mb-4',
     field: 'w-full px-3 py-2 border rounded-xl focus:outline-none focus:border-blue-500',
-    button: 'w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded-xl hover:bg-blue-600 focus:outline-none focus:bg-blue-600'
+    button: 'w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded-xl hover:bg-blue-600 focus:outline-none focus:bg-blue-600',
+    label: 'block text-gray-700 font-medium mb-1'
   }
 
   return (
     <div className='min-h-screen bg-gray-200 flex items-center justify-center'>
       <div className='bg-white p-8 rounded-3xl shadow-md w-96'>
-        <h1 className='text-2xl font-semibold mb-4'>Log in</h1>
+        <h1 className={styles.heading1}>Log in</h1>
         <form>
           <div className='mb-4'>
             <label htmlFor='email' className='block text-gray-700 font-medium mb-1'>Email Address</label>
