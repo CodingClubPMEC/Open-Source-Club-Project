@@ -1,8 +1,7 @@
 // Modules
-import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import './tailwind.css'
+import './components/styles/tailwind.css'
 // Components to renber everywhere
 //import Navbar from './components/ui/navbar'
 
