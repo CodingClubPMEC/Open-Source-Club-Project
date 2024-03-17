@@ -24,6 +24,7 @@ export default function Login() {
           <button type='submit' className={styles.button}>Login</button>
         </form>
         <p className='text-gray-700 text-sm mt-2'>Don't have an account? <Link to='/signup' className='text-blue-500 font-semibold'>Sign up here</Link></p>
+        <p className='text-gray-700 text-sm mt-2'>Just wanna checkout. Click here <Link to='/signup' className='text-blue-500 font-semibold'>Guest Login</Link></p>
       </div>
     </div>
   );
