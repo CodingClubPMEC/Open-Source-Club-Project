@@ -13,6 +13,8 @@ import ForgotPasswordForm from './components/auth/forotPasswordForm';
 
 export default function App() {
     return (
+        <>
+        <Navbar/>
         <Routes>
             <Route path='/' element={<Navbar/>}/>
             <Route index element={<Home />} />
@@ -20,6 +22,7 @@ export default function App() {
             <Route path='/signup' element={<Signup />} />
             <Route path='/forgot-password' element={<ForgotPasswordForm />} />
         </Routes>
+        </>
     );
 }
 
