@@ -5,6 +5,7 @@ export default function Navbar() {
     <>
       <nav>
         <menu>
+          <Link to='/home'>Home</Link>
           <Link to='/auth'>Auth</Link>
         </menu>
         <Outlet />
